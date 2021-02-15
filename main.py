@@ -41,9 +41,9 @@ today = datetime.now()
 
 pixel_data = {
     "date": today.strftime("%Y%m%d"),
-    "quantity": input("How much did you program today? "),
+    "quantity": input("How much did you code today? "),
 }
-
+#POST - MAKING A PIXEL
 response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
 print(response.text)
 
