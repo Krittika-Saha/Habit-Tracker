@@ -47,10 +47,10 @@ pixel_data = {
 response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
 print(response.text)
 
-update_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{input('The date(YYYYMMDD): ')}"
+update_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
 
 new_pixel_data = {
-    "quantity": input("The amount: ")
+    "quantity": "90"
 }
 
 ## PUT
